@@ -19,13 +19,13 @@ namespace_imports = [
     'hardware/xiaomi',
 ]
 
-blob_fixups: blob_fixups_user_type = 
+blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/c2.dolby.client.so' : blob_fixup()
         .add_needed('dolbycodec_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'dolby',
+    'sm8550-common-dolby',
     'xiaomi',
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
