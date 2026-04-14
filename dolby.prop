@@ -1,0 +1,7 @@
+# Dolby Audio
+vendor.audio.dolby.control.support=true
+
+# Dolby Display / Vision
+ro.vendor.display.dolbyvision.support=true
+ro.vendor.mi_sf.gallery_p3_dolby_opt=true
+debug.config.media.video.dolby_vision_suports=true
