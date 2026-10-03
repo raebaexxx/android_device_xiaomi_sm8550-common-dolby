@@ -1,6 +1,3 @@
 
-# Media
-vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
-
-# Dolby
+# Dolby DMS service
 vendor.dolby.hardware.dms::IDms       u:object_r:hal_dms_hwservice:s0
