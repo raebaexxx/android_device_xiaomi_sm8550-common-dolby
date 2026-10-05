@@ -50,5 +50,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 
+# Dolby Vision encoder declaration. c2.dolby.encoder.hevc has to be in the parsed
+# codec map or Codec2InfoBuilder drops it before it ever reaches the store, which
+# is why Dolby Vision recording in MIUI Camera either crashes or writes nothing.
+PRODUCT_COPY_FILES += \
+    $(DOLBY_PATH)/configs/media/media_codecs_fuxi_dolby_vision.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_fuxi_dolby_vision.xml
+
 # Inherit proprietary files
 $(call inherit-product, vendor/xiaomi/sm8550-common-dolby/sm8550-common-dolby-vendor.mk)
